@@ -1,0 +1,176 @@
+﻿# A5:ER FORMAT:11
+# A5:ER ENCODING:UTF8
+# A5:ER Mk-1 Copyright (C)2007 m.matsubara
+# A5:SQL Mk-2 Copyright (C)1997 m.matsubara
+#  http://www.wind.sannet.ne.jp/m_matsu/developer/a5m2/
+
+[Manager]
+ProjectName=WonFesSys
+Author=akihiro Iwata
+MaxEntityRowShow=1000
+ReadOnlyRecommend=0
+Page=Main
+PageInfo="Main",2,"A3Landscape",$FFFFFF
+LogicalView=0
+DecodeDomain=0
+ViewModePageIndividually=1
+ViewMode=2
+ViewFormat=0
+UseNondependenceDashLine=0
+FontName=Tahoma
+FontSize=12
+PaperSize=A4Landscape
+HeaderLeft=
+HeaderCenter=
+HeaderRight=
+FooterLeft=
+FooterCenter=
+FooterRight=
+ShowPageoutRelation=1
+RDBMSType=6
+RDBMSTypeName=PostgreSQL
+GenerateDropTableStatement=1
+DropTableIfExists=1
+CreateFk=1
+DefaultPkName=%0:s_PKC
+DefaultPkIndexName=%0:s_PKI
+DefaultIndexName=%0:s_IX%1:d
+DefaultFkName=%0:s_FK%1:d
+SqlSeparator=0
+ShowTag=1
+ShowCommonAttributes=0
+
+[Entity]
+PName=asdfasdfa
+LName=asdfas
+Comment=
+TableOption=
+Page=MAIN
+Left=2300
+Top=400
+Field="aaa","aaa","",,,"","",$FFFFFFFF,""
+Field="b","b","",,,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20180620224058
+Position="MAIN",2300,400,411,299
+
+[Line]
+Page=Main
+Left=187
+Top=1043
+Width=375
+Height=179
+LineColor=$0000FF
+StartLineTermType=3
+
+[Comment]
+Comment=/imgフォルダに保存する場合、/img/dealerid/xxx_p1.jpgと保存する\nimgFileは以下					\n　/dealerid/xxx_p1.jpg				\n　/dealerid/xxx_p2.jpg				\n※登録レコード数は最大5つ
+FontName=ＭＳ ゴシック
+FontBold=0
+FontItalic=0
+FontUnderline=0
+FontSize=12
+FontColor=$000000
+LineColor=$000000
+BkColor=$C0DCC0
+Page=Main
+Left=1400
+Top=1500
+Width=1765
+Height=330
+
+[Relation]
+Entity1=prd_field_master
+Entity2=DEALER_DETAIL
+RelationType1=1
+RelationType2=3
+Fields1=product_filed_cd
+Fields2=product_filed_cd
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,3258,6742,3578,R,R
+Dependence=1
+Caption=
+PName=
+LineMode=0
+Bar1=326
+Bar2=674
+Bar3=358
+TermPos1=R
+TermPos2=R
+
+[Relation]
+Entity1=DEALER
+Entity2=DEALER_DETAIL
+RelationType1=2
+RelationType2=3
+Fields1=dealer_id
+Fields2=dealer_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1484,8516,991,R,R
+Dependence=1
+Caption=
+PName=
+LineMode=0
+Bar1=148
+Bar2=852
+Bar3=99
+TermPos1=R
+TermPos2=R
+
+[Entity]
+PName=prd_field_master
+LName=作品分野マスタ
+Comment=
+TableOption=
+Page=MAIN
+Left=400
+Top=1800
+Field="作品分野コード","product_filed_cd","char(4)","NOT NULL",0,"","aiueo",$FFFFFFFF,""
+Field="作品分野名","product_filed_name","varchar(20)","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20180620223902
+Position="MAIN",400,1800,224,69
+
+[Entity]
+PName=DEALER_DETAIL
+LName=ディーラー詳細
+Comment=
+TableOption=
+Page=MAIN
+Left=600
+Top=1200
+Field="ディーラーid","dealer_id","int","NOT NULL",0,"","",$FFFFFFFF,""
+Field="商品名","product_name","varchar(20)","NOT NULL",1,"","",$FFFFFFFF,""
+Field="作品分野コード","product_filed_cd","char(4)","NOT NULL",,"","",$FFFFFFFF,""
+Field="値段","price","integer","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20180401154453
+Position="MAIN",600,1200,637,484
+
+[Entity]
+PName=DEALER
+LName=ディーラー
+Comment=
+TableOption=
+Page=MAIN
+Left=1200
+Top=300
+Field="ディーラーid","dealer_id","int","NOT NULL",0,"","",$FFFFFFFF,""
+Field="ディーラー名","name","varchar(20)","NOT NULL",,"","",$FFFFFFFF,""
+Field="卓番号","takuban","char(6)","NOT NULL",,"","",$FFFFFFFF,""
+Field="ディーラーアイコンコード","dealer_icon_cd","varchar(10)","NOT NULL",,"","",$FFFFFFFF,""
+Field="HPリンク","hp_link","varchar(50)","NOT NULL",,"","",$FFFFFFFF,""
+Field="TWリンク","tw_link","varchar(50)","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20180401152539
+Position="MAIN",1200,300,412,414
