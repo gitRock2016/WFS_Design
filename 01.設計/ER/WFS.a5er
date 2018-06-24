@@ -46,24 +46,61 @@ ShowCommonAttributes=0
 
 [Relation]
 Entity1=categories
-Entity2=dealers_detail_products
-RelationType1=1
+Entity2=dealers_detail_products_categories
+RelationType1=2
 RelationType2=3
 Fields1=category_id
 Fields2=category_id
 Cardinarity1=
 Cardinarity2=
-Position="MAIN",0,2667,7333,2686,R,R
-Position="MASTER",0,2667,7333,2953,R,R
+Position="MAIN",0,3602,6398,3654,R,R
+Dependence=1
+Caption=
+PName=
+ModifiedDateTime=20180625020210
+LineMode=0
+Bar1=360
+Bar2=640
+Bar3=365
+TermPos1=R
+TermPos2=R
+
+[Relation]
+Entity1=dealers_detail_products
+Entity2=dealers_detail_products_categories
+RelationType1=1
+RelationType2=3
+Fields1=dealer_id,product_id
+Fields2=dealer_id,product_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,3081,6919,3522,R,R
 Dependence=1
 Caption=
 PName=
 LineMode=0
-Bar1=267
-Bar2=733
-Bar3=269
+Bar1=308
+Bar2=692
+Bar3=352
 TermPos1=R
 TermPos2=R
+
+[Entity]
+PName=dealers_detail_products_categories
+LName=ディーラー詳細作品分野
+Comment=
+TableOption=
+Page=Main
+Left=3000
+Top=1000
+Field="ディーラーID","dealer_id","integer","NOT NULL",0,"","",$FFFFFFFF,""
+Field="作品ID","product_id","integer",,1,"","",$FFFFFFFF,""
+Field="ジャンル","category_id","integer","NOT NULL",2,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20180625020121
+Position="Main",3000,1000,708,516
 
 [Relation]
 Entity1=usr
@@ -299,8 +336,8 @@ LName=ディーラー詳細作品画像
 Comment=
 TableOption=
 Page=MAIN
-Left=2800
-Top=2000
+Left=2000
+Top=1900
 Field="ディーラーID","dealer_id","integer","NOT NULL",0,"","",$FFFFFFFF,""
 Field="作品ID","product_id","integer",,1,"","",$FFFFFFFF,""
 Field="作品画像ファイル","img_product_file","varchar(50)",,2,"","",$FFFFFFFF,""
@@ -308,7 +345,7 @@ EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
 ModifiedDateTime=20180621212723
-Position="MAIN",2800,2000,995,416
+Position="MAIN",2000,1900,995,416
 
 [Entity]
 PName=dealers_detail_products
@@ -320,7 +357,6 @@ Left=1600
 Top=900
 Field="ディーラーID","dealer_id","integer","NOT NULL",0,"","",$FFFFFFFF,""
 Field="作品ID","product_id","integer",,1,"","",$FFFFFFFF,""
-Field="ジャンル","category_id","integer",,2,"","",$FFFFFFFF,""
 Field="作品名","product_name","varchar(50)",,,"","",$FFFFFFFF,""
 Field="値段","price","integer",,,"","",$FFFFFFFF,""
 Field="紹介文","introduce","text",,,"","",$FFFFFFFF,""
@@ -328,7 +364,7 @@ Field="販売時期","season_id","integer",,,"","",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20180624162228
+ModifiedDateTime=20180625020041
 Position="MAIN",1600,900,811,684
 
 [Entity]
@@ -337,8 +373,8 @@ LName=ディーラー詳細作品販売時期
 Comment=
 TableOption=
 Page=MAIN
-Left=1100
-Top=2100
+Left=1000
+Top=1900
 Field="ディーラーID","dealer_id","integer",,0,"","",$FFFFFFFF,""
 Field="作品ID","product_id","integer",,1,"","",$FFFFFFFF,""
 Field="販売時期","event_date_id","integer","NOT NULL",2,"","",$FFFFFFFF,""
@@ -346,7 +382,7 @@ EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
 ModifiedDateTime=20180621213623
-Position="MAIN",1100,2100,628,423
+Position="MAIN",1000,1900,628,423
 
 [Comment]
 Comment=/imgフォルダに保存する場合、/img/dealerid/xxx_p1.jpgと保存する\nimgFileは以下					\n　/dealerid/xxx_p1.jpg				\n　/dealerid/xxx_p2.jpg				\n※登録レコード数は最大5つ
