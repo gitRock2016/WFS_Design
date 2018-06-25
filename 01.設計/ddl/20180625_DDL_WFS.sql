@@ -187,3 +187,4 @@ comment on column dealers.hp_link is 'HPリンク';
 comment on column dealers.tw_link is 'TWリンク';
 comment on column dealers.sort_key is 'ソートキー:ア、カなど（読み仮名）';
 comment on column dealers.img_icon_file is 'アイコン画像ファイル';
+

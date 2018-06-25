@@ -54,6 +54,7 @@ Fields2=category_id
 Cardinarity1=
 Cardinarity2=
 Position="MAIN",0,3602,6398,3654,R,R
+Position="MASTER",0,2701,7299,2953,R,R
 Dependence=1
 Caption=
 PName=
@@ -90,7 +91,7 @@ PName=dealers_detail_products_categories
 LName=ディーラー詳細作品分野
 Comment=
 TableOption=
-Page=Main
+Page=MAIN
 Left=3000
 Top=1000
 Field="ディーラーID","dealer_id","integer","NOT NULL",0,"","",$FFFFFFFF,""
@@ -100,7 +101,7 @@ EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
 ModifiedDateTime=20180625020121
-Position="Main",3000,1000,708,516
+Position="MAIN",3000,1000,708,516
 
 [Relation]
 Entity1=usr
