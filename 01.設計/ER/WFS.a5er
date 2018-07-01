@@ -44,6 +44,22 @@ SqlSeparator=0
 ShowTag=1
 ShowCommonAttributes=0
 
+[Comment]
+Comment=登録後にディーラ情報、プロダクト情報が削除されることもあるため\n以下にFKはいれない\ndealer_id, product_id
+FontName=Tahoma
+FontBold=0
+FontItalic=0
+FontUnderline=0
+FontSize=9
+FontColor=$000000
+LineColor=$000000
+BkColor=$C0DCC0
+Page=Usr
+Left=900
+Top=2100
+Width=877
+Height=302
+
 [Relation]
 Entity1=categories
 Entity2=dealers_detail_products_categories
