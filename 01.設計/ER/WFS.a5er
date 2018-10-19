@@ -45,6 +45,22 @@ ShowTag=1
 ShowCommonAttributes=0
 
 [Comment]
+Comment=運用上、最大5作品までの登録とする
+FontName=Tahoma
+FontBold=0
+FontItalic=0
+FontUnderline=0
+FontSize=9
+FontColor=$000000
+LineColor=$000000
+BkColor=$C0DCC0
+Page=Main
+Left=2200
+Top=2100
+Width=753
+Height=132
+
+[Comment]
 Comment=登録後にディーラ情報、プロダクト情報が削除されることもあるため\n以下にFKはいれない\ndealer_id, product_id
 FontName=Tahoma
 FontBold=0
@@ -174,7 +190,7 @@ Field="役割","role","varchar(30)",,1,"","",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20180621211421
+ModifiedDateTime=20181019215004
 Position="USR",1700,500,579,339
 
 [Entity]
@@ -203,16 +219,16 @@ Page=USR
 Left=400
 Top=300
 Field="","usr_id","char(10)",,0,"","",$FFFFFFFF,""
-Field="","passwd","char(32)",,,"","",$FFFFFFFF,""
+Field="","passwd","varchar(50)",,,"","",$FFFFFFFF,""
 Field="","user_name","varchar(50)",,,"","",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20180621210949
+ModifiedDateTime=20181019214937
 Position="USR",400,300,526,466
 
 [Comment]
-Comment=テーブル名、カラム名の命名規則は以下参照\nhttps://qiita.com/genzouw/items/35022fa96c120e67c637
+Comment=テーブル名、カラム名の命名規則は以下参照\nhttps://qiita.com/genzouw/items/35022fa96c120e67c637\nTODO\n・登録日時、登録ID、更新日時、更新IDをもたせたい
 FontName=メイリオ
 FontBold=0
 FontItalic=0
@@ -222,8 +238,8 @@ FontColor=$000000
 LineColor=$000000
 BkColor=$F0CAA6
 Page=Main
-Left=2300
-Top=0
+Left=2200
+Top=100
 Width=1806
 Height=402
 
@@ -278,14 +294,14 @@ Fields1=dealer_id,product_id
 Fields2=dealer_id,product_id
 Cardinarity1=
 Cardinarity2=
-Position="MAIN",0,4472,5528,3572,R,R
+Position="MAIN",0,4472,5528,3654,R,R
 Dependence=1
 Caption=
 PName=
 LineMode=0
 Bar1=447
 Bar2=553
-Bar3=357
+Bar3=365
 TermPos1=R
 TermPos2=R
 
@@ -374,14 +390,14 @@ Left=1600
 Top=900
 Field="ディーラーID","dealer_id","integer","NOT NULL",0,"","",$FFFFFFFF,""
 Field="作品ID","product_id","integer",,1,"","",$FFFFFFFF,""
-Field="作品名","product_name","varchar(50)",,,"","",$FFFFFFFF,""
+Field="作品名","product_name","varchar(200)",,,"","",$FFFFFFFF,""
 Field="値段","price","integer",,,"","",$FFFFFFFF,""
 Field="紹介文","introduce","text",,,"","",$FFFFFFFF,""
 Field="販売時期","season_id","integer",,,"","",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20180625020041
+ModifiedDateTime=20181019212500
 Position="MAIN",1600,900,811,684
 
 [Entity]
@@ -402,7 +418,7 @@ ModifiedDateTime=20180621213623
 Position="MAIN",1000,1900,628,423
 
 [Comment]
-Comment=/imgフォルダに保存する場合、/img/dealerid/xxx_p1.jpgと保存する\nimgFileは以下					\n　/dealerid/xxx_p1.jpg				\n　/dealerid/xxx_p2.jpg				\n※登録レコード数は最大5つ
+Comment=画像ファイルは以下の形式で保存される\ndealers.img_icon_file\ni_[ユーザーID].jpg\n\ndealers_detail_products_imgs.img_product_file\np_[ユーザーID]_[連番].jpg\n\n詳細は以下参照\nhttps://iwatakhr69.esa.io/posts/90\n
 FontName=メイリオ
 FontBold=0
 FontItalic=0
@@ -413,7 +429,7 @@ LineColor=$000000
 BkColor=$C0DCC0
 Page=Main
 Left=2400
-Top=2500
+Top=2400
 Width=1569
 Height=325
 
@@ -423,18 +439,18 @@ LName=ディーラー
 Comment=
 TableOption=
 Page=MAIN
-Left=200
+Left=100
 Top=100
 Field="ディーラーid","dealer_id","int",,0,"","",$FFFFFFFF,""
 Field="ディーラー名","dealer_name","varchar(20)",,,"","",$FFFFFFFF,""
 Field="事業形態","bussines_type","char(1)",,,"","0:個人、1:法人",$FFFFFFFF,""
 Field="卓番号","takuban","char(6)",,,"","",$FFFFFFFF,""
-Field="HPリンク","hp_link","varchar(50)",,,"","",$FFFFFFFF,""
-Field="TWリンク","tw_link","varchar(50)",,,"","",$FFFFFFFF,""
+Field="HPリンク","hp_link","varchar(200)",,,"","",$FFFFFFFF,""
+Field="TWリンク","tw_link","varchar(200)",,,"","",$FFFFFFFF,""
 Field="ソートキー","sort_key","char(1)",,,"","ア、カなど（読み仮名）",$FFFFFFFF,""
 Field="アイコン画像ファイル","img_icon_file","varchar(50)",,,"","",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20180621213511
-Position="MAIN",200,100,931,603
+ModifiedDateTime=20181019211831
+Position="MAIN",100,100,931,603
