@@ -221,12 +221,12 @@ Top=300
 Field="","usr_id","char(10)",,0,"","",$FFFFFFFF,""
 Field="","passwd","varchar(50)",,,"","",$FFFFFFFF,""
 Field="","user_name","varchar(50)",,,"","",$FFFFFFFF,""
-Field="","ins_date","@TIME",,,"","",$FFFFFFFF,""
-Field="","upd_date","@TIME",,,"","",$FFFFFFFF,""
+Field="","ins_date","timestamp",,,"","",$FFFFFFFF,""
+Field="","upd_date","timestamp",,,"","",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20181223202112
+ModifiedDateTime=20181224132906
 Position="USR",400,300,526,466
 
 [Comment]
