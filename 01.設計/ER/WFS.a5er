@@ -373,13 +373,14 @@ TableOption=
 Page=MAIN
 Left=2000
 Top=1900
-Field="ディーラーID","dealer_id","integer","NOT NULL",0,"","",$FFFFFFFF,""
+Field="ディーラーID","dealer_id","integer",,0,"","",$FFFFFFFF,""
 Field="作品ID","product_id","integer",,1,"","",$FFFFFFFF,""
-Field="作品画像ファイル","img_product_file","varchar(50)",,2,"","",$FFFFFFFF,""
+Field="番号","img_seq","integer",,2,"","",$FFFFFFFF,""
+Field="作品画像ファイル","img_product_file","varchar(50)",,,"","",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20180621212723
+ModifiedDateTime=20190105115003
 Position="MAIN",2000,1900,995,416
 
 [Entity]
@@ -399,7 +400,7 @@ Field="販売時期","season_id","integer",,,"","",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20181019212500
+ModifiedDateTime=20190105121153
 Position="MAIN",1800,900,811,684
 
 [Entity]
