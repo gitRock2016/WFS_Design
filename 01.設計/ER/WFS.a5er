@@ -409,7 +409,7 @@ LName=ディーラー詳細作品販売時期
 Comment=
 TableOption=
 Page=MAIN
-Left=500
+Left=300
 Top=1900
 Field="ディーラーID","dealer_id","integer",,0,"","",$FFFFFFFF,""
 Field="作品ID","product_id","integer",,1,"","",$FFFFFFFF,""
@@ -418,7 +418,7 @@ EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
 ModifiedDateTime=20180621213623
-Position="MAIN",500,1900,628,423
+Position="MAIN",300,1900,628,423
 
 [Comment]
 Comment=画像ファイルは以下の形式で保存される\ndealers.img_icon_file\ni_[ユーザーID].jpg\n\ndealers_detail_products_imgs.img_product_file\np_[ユーザーID]_[連番].jpg\n\n詳細は以下参照\nhttps://iwatakhr69.esa.io/posts/90\n
